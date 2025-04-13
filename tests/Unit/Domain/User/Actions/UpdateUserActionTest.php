@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Unit\Domains\User\Actions;
 
 use Tests\TestCase;
@@ -20,7 +21,7 @@ class UpdateUserActionTest extends TestCase
             'password' => $originalPassword,
             'profile_picture' => 'old.jpg',
         ]);
-    
+
         $dto = new UserData(
             name: 'UpdatedName',
             surname: 'UpdatedSurname',
@@ -31,7 +32,7 @@ class UpdateUserActionTest extends TestCase
             profile_picture: 'profile_pictures/updated.jpg'
         );
 
-        
+
         $updatedUser = (new UpdateUserAction())->execute($user, $dto);
 
         $this->assertEquals('UpdatedName', $updatedUser->name);
@@ -42,4 +43,3 @@ class UpdateUserActionTest extends TestCase
         $this->assertEquals('profile_pictures/updated.jpg', $updatedUser->profile_picture);
     }
 }
-?>

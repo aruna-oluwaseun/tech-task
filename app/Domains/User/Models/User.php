@@ -19,6 +19,6 @@ class User extends Model
         'password',
         'profile_picture',
     ];
-    
+
     //
 }

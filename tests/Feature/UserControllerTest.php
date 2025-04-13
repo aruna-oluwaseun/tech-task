@@ -25,7 +25,7 @@ class UserControllerTest extends TestCase
     public function it_can_create_a_user()
     {
         Storage::fake('public');
-    
+
         $data = [
             'name' => 'Jane',
             'surname' => 'Doeyy',

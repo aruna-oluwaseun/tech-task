@@ -24,5 +24,5 @@ class UserFactory extends Factory
             'profile_picture' => 'default.jpg',
         ];
     }
-    
+
 }

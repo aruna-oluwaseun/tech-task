@@ -36,7 +36,7 @@ class UserController extends BaseController
             $request->validated(),
             ['profilePicture' => $this->storeFile($request->file('profile_picture'), 'profile_pictures')]
         );
-    
+
         $action->execute($dto);
 
         return $this->redirectSuccess('users.index', 'User created successfully.');
@@ -59,11 +59,11 @@ class UserController extends BaseController
         return $this->redirectSuccess('users.index', 'User updated successfully.');
     }
 
-    Public function destroy(User $user)
+    public function destroy(User $user)
     {
-       $user->delete();
+        $user->delete();
 
-       return $this->redirectSuccess('users.index', 'User deleted successfully.');
+        return $this->redirectSuccess('users.index', 'User deleted successfully.');
 
     }
 

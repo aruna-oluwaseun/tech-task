@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Unit\Domains\User\Actions;
 
 use Tests\TestCase;
@@ -35,10 +36,8 @@ class CreateUserActionTest extends TestCase
             'email' => 'ade@yahoo.com',
             'name' => 'Adelana',
         ]);
-        
+
         $this->assertTrue(password_verify('Shawen@123!', $user->password));
         $this->assertEquals('profile_pictures/avatar.jpg', $user->profile_picture);
     }
 }
-
-?>

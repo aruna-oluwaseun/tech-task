@@ -15,8 +15,9 @@ class UserData
         public string $country,
         public string $gender,
         public ?string $password = null,
-        public ?string $profile_picture= null,
-    ) {}
+        public ?string $profile_picture = null,
+    ) {
+    }
 
     public static function fromArray(array $data): self
     {
@@ -32,5 +33,3 @@ class UserData
         );
     }
 }
-
-?>
